@@ -14,18 +14,14 @@ jobs:
       contents: read
       pull-requests: write
     
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
     
-    - name: Setup Node.js ${{ matrix.node-version }}
+    - name: Setup Node.js 14.x
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 14.x
         cache: 'npm'
     
     - name: Install dependencies
@@ -38,7 +34,7 @@ jobs:
       run: npm run test:coverage
     
     - name: Jest Coverage Comment
-      if: matrix.node-version == '20.x' && github.event_name == 'pull_request'
+      if: github.event_name == 'pull_request'
       uses: MishaKav/jest-coverage-comment@main
       with:
         coverage-summary-path: ./coverage/coverage-summary.json

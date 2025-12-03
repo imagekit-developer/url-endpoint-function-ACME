@@ -14,13 +14,13 @@ describe('URL Endpoint Function Handler', () => {
     }
   };
 
-  it('should replace /v1/ with /v2/ in the URL', () => {
-    const url = 'https://ik.imagekit.io/demo/v1/image.jpg';
+  it('should return the original URL unchanged', () => {
+    const url = 'https://ik.imagekit.io/demo/image.jpg';
     const urlPrefix = 'demo';
     
     const result = handler(url, urlPrefix, mockContext);
     
-    expect(result.url).toBe('https://ik.imagekit.io/demo/v2/image.jpg');
+    expect(result.url).toBe(url);
     expect(result.signURL).toBe(false);
   });
 });

@@ -2,6 +2,10 @@
 
 Template for creating and testing ImageKit URL Endpoint Functions with unit tests and GitHub Actions CI.
 
+## Requirements
+
+- **Node.js 14.19.2** - This handler is designed to run on Node.js 14.19.2 backend
+
 ## Quick Start
 
 ```bash
@@ -115,4 +119,4 @@ npm run test:coverage # With coverage
 
 ## CI/CD
 
-GitHub Actions automatically runs tests on push/PR to `main` or `develop` branches. Tests run on Node.js 18.x and 20.x.
+GitHub Actions automatically runs tests on push/PR to `main` or `develop` branches. Tests run on Node.js 14.x to match the production environment (Node.js 14.19.2).

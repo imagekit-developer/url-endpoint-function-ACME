@@ -15,9 +15,9 @@
  * @returns {object} Result object with url and optional signURL flag
  */
 function handler(url, urlPrefix, context) {
-  // Change /v1/ to /v2/ in path
+  // Default behavior: return URL unchanged without signing
   return {
-    url: url.replace('/v1/', '/v2/'),
+    url: url,
     signURL: false
   };
 }
