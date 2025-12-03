@@ -20,7 +20,7 @@ describe('URL Endpoint Function Handler', () => {
     
     const result = handler(url, urlPrefix, mockContext);
     
-    expect(result.url).toBe("https://ik.imagekit.io/demo/image2.jpg");
+    expect(result.url).toBe(url);
     expect(result.signURL).toBe(false);
   });
 });
