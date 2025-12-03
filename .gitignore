@@ -1,6 +1,6 @@
 # Dependencies
 node_modules/
-package-lock.json  # Excluded to avoid platform-specific issues (fsevents on macOS vs Linux CI)
+package-lock.json
 
 # Test coverage
 coverage/
