@@ -27,6 +27,11 @@
     ],
     "testMatch": [
       "**/*.test.js"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
     ]
   }
 }
