@@ -22,4 +22,4 @@ function handler(url, urlPrefix, context) {
   };
 }
 
-module.exports = handler;
+module.exports.handler = handler;

@@ -1,4 +1,4 @@
-const handler = require('./handler');
+const { handler } = require('./handler');
 
 describe('URL Endpoint Function Handler', () => {
   // Mock context object for testing
