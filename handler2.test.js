@@ -1,6 +1,6 @@
-const { handler } = require('./handler');
+const { handler } = require('./handler2');
 
-describe('URL Endpoint Function Handler', () => {
+describe('URL Endpoint Function Handler 2', () => {
   // Mock context object for testing
   const mockContext = {
     host: 'ik.imagekit.io',
@@ -16,7 +16,7 @@ describe('URL Endpoint Function Handler', () => {
 
   it('should return the original URL unchanged', () => {
     const url = 'https://ik.imagekit.io/demo/image.jpg';
-    const urlPrefix = 'demo';
+    const urlPrefix = '/';
     
     const result = handler(url, urlPrefix, mockContext);
     

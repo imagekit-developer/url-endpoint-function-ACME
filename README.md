@@ -91,6 +91,27 @@ npm run test:watch    # Watch mode
 npm run test:coverage # With coverage
 ```
 
+### Multiple Handlers
+
+This template supports multiple handlers in the same repository. Each handler should follow the naming convention `handler*.js` with a corresponding test file `handler*.test.js`.
+
+**Current structure:**
+```
+handler1.js          # Handler implementation 1
+handler1.test.js     # Tests for handler 1
+handler2.js          # Handler implementation 2
+handler2.test.js     # Tests for handler 2
+```
+
+All test files matching `**/*.test.js` will be automatically discovered and executed by Jest. The CI pipeline will run all tests for all handlers.
+
+**To add a new handler:**
+1. Create `handlerN.js` with your handler implementation
+2. Create `handlerN.test.js` with corresponding tests
+3. Run `npm test` to verify all handlers pass their tests
+
+Coverage is collected for all `handler*.js` files automatically.
+
 ## CI/CD
 
-GitHub Actions automatically runs tests on push/PR to `main` or `develop` branches.
+GitHub Actions automatically runs tests on push/PR to `main` or `develop` branches. All test files will be executed and coverage will be reported for all handlers.

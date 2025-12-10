@@ -23,7 +23,7 @@
     "testEnvironment": "node",
     "coverageDirectory": "coverage",
     "collectCoverageFrom": [
-      "handler.js"
+      "handler*.js"
     ],
     "testMatch": [
       "**/*.test.js"
